@@ -1,0 +1,42 @@
+.home { margin-left: 280px; padding: 2rem; }
+.home-header { display:flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+.home-header h1 { font-size: 2rem; font-weight: 700; color: var(--color-text); margin: 0; }
+.muted { color: var(--color-muted); }
+.header-actions { display:flex; gap: .5rem; }
+
+.kpi-grid { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; margin-bottom: 2rem; }
+.kpi-card { position:relative; background: var(--color-surface); border:1px solid var(--color-border); border-radius: var(--radius-card); padding: 1.25rem; box-shadow: var(--shadow-sm); display:flex; align-items:center; gap: 1rem; transition: box-shadow .2s, transform .2s; }
+.kpi-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.kpi-strip { position:absolute; left:0; top:0; bottom:0; width: 4px; border-radius: var(--radius-card) 0 0 var(--radius-card); }
+.kpi-value { font-size: 1.5rem; font-weight: 700; color: var(--color-text); }
+.kpi-label { color: var(--color-muted); font-weight: 500; }
+
+.timeline { display:flex; flex-direction: column; gap: 1rem; }
+.timeline-item { display:grid; grid-template-columns: 70px 12px 1fr; align-items: start; gap: .75rem; }
+.time { font-weight: 700; color: var(--color-text); }
+.dot { width:12px; height:12px; border-radius: 50%; margin-top:.35rem; }
+.lesson-top { display:flex; justify-content: space-between; gap: .75rem; }
+.subject { font-weight: 700; }
+.room, .teacher { color: var(--color-muted); font-size: .9rem; }
+
+.ann-list { display:flex; flex-direction: column; gap: .75rem; }
+.ann-item { border:1px solid var(--color-border); border-radius: 8px; padding: .75rem 1rem; background: var(--color-bg); transition: background .2s, border-color .2s; }
+.ann-item:hover { background: #fff; border-color: #cbd5e1; }
+.ann-top { display:flex; justify-content: space-between; align-items:center; margin-bottom: .25rem; }
+.ann-title { font-weight: 600; color: var(--color-text); }
+
+.pill { padding: .25rem .5rem; border-radius: 9999px; font-size: .75rem; font-weight: 600; }
+.pill-high { background:#fee2e2; color:#b91c1c; }
+.pill-medium { background:#fef3c7; color:#92400e; }
+.pill-low { background:#dbeafe; color:#1e40af; }
+
+.quick-actions .qa-grid { display:flex; flex-wrap: wrap; gap: .75rem; }
+
+@media (max-width: 1024px) {
+  .kpi-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .home { margin-left: 0; padding: 1rem; }
+  .home-header { flex-direction: column; align-items: flex-start; gap: .5rem; }
+}
+

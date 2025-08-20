@@ -6,11 +6,18 @@ const Sidebar = () => {
   const location = useLocation();
 
   const navItems = [
-    { path: '/dashboard', label: 'Dashboard', icon: '📊' },
+    { path: '/', label: 'Home', icon: '🏠' },
     { path: '/grades', label: 'Grades', icon: '📚' },
     { path: '/assignments', label: 'Assignments', icon: '📝' },
+    { path: '/resources', label: 'Resources', icon: '📂' },
     { path: '/schedule', label: 'Schedule', icon: '📅' },
+    { path: '/reports', label: 'Reports', icon: '📑' },
   ];
+
+  const isActive = (path) => {
+    if (path === '/' && (location.pathname === '/' || location.pathname === '/home')) return true;
+    return location.pathname === path;
+  };
 
   return (
     <aside className="sidebar">
@@ -24,7 +31,7 @@ const Sidebar = () => {
             <li key={item.path} className="nav-item">
               <Link
                 to={item.path}
-                className={`nav-link ${location.pathname === item.path ? 'active' : ''}`}
+                className={`nav-link ${isActive(item.path) ? 'active' : ''}`}
               >
                 <span className="nav-icon">{item.icon}</span>
                 <span className="nav-label">{item.label}</span>
