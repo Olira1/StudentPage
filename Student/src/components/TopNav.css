@@ -1,0 +1,12 @@
+.topnav { position: fixed; top: 0; left: 0; right: 0; height: 64px; background: var(--color-surface); border-bottom: 1px solid var(--color-border); display:flex; align-items:center; justify-content: space-between; padding: 0 1rem; z-index: 50; box-shadow: var(--shadow-sm); }
+.topnav-left, .topnav-right { display:flex; align-items:center; gap: .5rem; }
+.home-link { display:inline-flex; align-items:center; gap:.5rem; font-weight: 700; color: var(--primary); padding: .5rem .75rem; border-radius: 8px; }
+.home-link:hover { background: #eff6ff; }
+.nav-pill { background: #eef2f7; color:#334155; padding: .35rem .6rem; border-radius: 9999px; font-weight: 600; font-size: .9rem; }
+.nav-pill.grade { background: #e0e7ff; color:#3730a3; }
+
+.icon-btn { width: 44px; height: 44px; display:inline-flex; align-items:center; justify-content:center; border:none; background: transparent; border-radius: 8px; cursor: pointer; font-size: 22px; }
+.icon-btn:hover { background: #f1f5f9; }
+
+/* Content offset utility for pages with sidebar */
+.with-topbar { padding-top: 72px; }
