@@ -11,6 +11,14 @@
 .kpi-value { font-size: 1.5rem; font-weight: 700; color: var(--color-text); }
 .kpi-label { color: var(--color-muted); font-weight: 500; }
 
+/* Quick Actions in KPI area */
+.quick-actions-card { flex-direction: column; align-items: flex-start; gap: .75rem; }
+.qa-header { width:100%; display:flex; align-items:center; justify-content: space-between; }
+.qa-title { font-weight: 800; color: var(--color-text); letter-spacing: .02em; }
+.qa-buttons { display:flex; flex-wrap: wrap; gap: .5rem; }
+.qa-buttons .btn { border-radius: 9999px; box-shadow: var(--shadow-sm); }
+.qa-buttons .btn:hover { box-shadow: var(--shadow-md); }
+
 .timeline { display:flex; flex-direction: column; gap: 1rem; }
 .timeline-item { display:grid; grid-template-columns: 70px 12px 1fr; align-items: start; gap: .75rem; }
 .time { font-weight: 700; color: var(--color-text); }
@@ -29,8 +37,6 @@
 .pill-high { background:#fee2e2; color:#b91c1c; }
 .pill-medium { background:#fef3c7; color:#92400e; }
 .pill-low { background:#dbeafe; color:#1e40af; }
-
-.quick-actions .qa-grid { display:flex; flex-wrap: wrap; gap: .75rem; }
 
 @media (max-width: 1024px) {
   .kpi-grid { grid-template-columns: 1fr; }

@@ -9,10 +9,9 @@ const Home = () => {
     return () => clearInterval(t);
   }, []);
 
+  // Keep only Attendance in KPI cards
   const kpis = [
     { label: 'Attendance', value: '96%', tone: 'success' },
-    { label: 'GPA', value: '3.7', tone: 'primary' },
-    { label: 'Upcoming', value: '4', tone: 'warning' },
   ];
 
   const schedule = [
@@ -57,6 +56,17 @@ const Home = () => {
             </div>
           </div>
         ))}
+        {/* Quick Actions card occupies second slot in the KPI grid */}
+        <div className="kpi-card quick-actions-card">
+          <div className="qa-header">
+            <span className="qa-title">Quick Actions</span>
+          </div>
+          <div className="qa-buttons">
+            <button className="btn btn-primary">View Assignments</button>
+            <button className="btn btn-primary">Check Grades</button>
+            <button className="btn btn-primary">Download Report</button>
+          </div>
+        </div>
       </section>
 
       <div className="grid-2 responsive">
@@ -100,17 +110,6 @@ const Home = () => {
           </div>
         </section>
       </div>
-
-      <section className="quick-actions card">
-        <div className="card-header">
-          <h3 className="card-title">Quick Actions</h3>
-        </div>
-        <div className="qa-grid">
-          <button className="btn btn-primary">View Assignments</button>
-          <button className="btn btn-primary">Check Grades</button>
-          <button className="btn btn-primary">Download Report</button>
-        </div>
-      </section>
     </div>
   );
 };
