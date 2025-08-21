@@ -22,13 +22,77 @@
   gap: 0.5rem;
 }
 
-.class-selection {
-  margin-bottom: 2rem;
-  max-width: 300px;
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 1rem;
+}
+.tab {
+  background: transparent;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  color: #64748b;
+}
+.tab.active {
+  color: #0f172a;
+  border-color: #3b82f6;
+  font-weight: 600;
 }
 
-.grades-table-section {
-  margin-bottom: 2rem;
+/* Filters */
+.filters {
+  display: flex;
+  gap: 0.75rem;
+  margin: 0.75rem 0 1rem;
+}
+.select-with-clear {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.select-with-clear .form-select {
+  padding-right: 2rem;
+}
+.clear-btn {
+  position: absolute;
+  right: 0.25rem;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  color: #64748b;
+  cursor: pointer;
+}
+
+/* Two column content */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+/* Left info list */
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.info-row {
+  display: flex;
+  gap: 0.5rem;
+}
+.info-row dt {
+  width: 120px;
+  color: #334155;
+  font-weight: 600;
+}
+.info-row dd {
+  margin: 0;
+  color: #0f172a;
 }
 
 .grade-summary {
@@ -48,6 +112,40 @@
 
 .table-container {
   overflow-x: auto;
+}
+
+/* Report table styling to match app background */
+.report-card {
+  background: var(--color-surface, #ffffff);
+}
+.report-table .subjects-col {
+  width: 45%;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.report-table thead th {
+  vertical-align: bottom;
+}
+.report-table tbody tr:nth-child(even) {
+  background: rgba(248, 250, 252, 0.6);
+}
+.report-table td,
+.report-table th {
+  white-space: nowrap;
+}
+
+/* Transcript layout spacing */
+.transcript-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.strong {
+  font-weight: 600;
 }
 
 .grade-row {
@@ -167,31 +265,37 @@
     margin-left: 0;
     padding: 1rem;
   }
-  
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+  .filters {
+    flex-direction: column;
+  }
+
   .grades-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
   }
-  
+
   .class-selection {
     max-width: 100%;
   }
-  
+
   .table-container {
     font-size: 0.875rem;
   }
-  
+
   .feedback {
     max-width: 200px;
   }
-  
+
   .chart-bar {
     grid-template-columns: 1fr;
     gap: 0.5rem;
     text-align: center;
   }
-  
+
   .bar-container {
     width: 100%;
   }
